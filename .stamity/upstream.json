@@ -1,7 +1,7 @@
 {
   "version": 1,
   "upstream": "https://github.com/zomarit/stamity-p13-upstream-20260910",
-  "branch": "integration-v2",
+  "branch": "warning-proof",
   "gates": [
     {
       "name": "check",
@@ -37,5 +37,8 @@
   ],
   "watch": [
     "fixtures/p13-upstream.txt"
-  ]
+  ],
+  "releases": {
+    "prerelease": true
+  }
 }
