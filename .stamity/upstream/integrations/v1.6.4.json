@@ -1,0 +1,74 @@
+{
+  "tool": "stamity-upstream-lane",
+  "version": 1,
+  "release": "v1.6.4",
+  "releaseCommit": "56da4b847bbf31a75cb8b52a4f8abd116c62384c",
+  "mergeBase": "5f7ef60ffef9832c4c9f93702ce73afcb7af85e4",
+  "targetBranch": "integration-v2",
+  "targetHead": "26347e53ef459949dd377fc3764f117eacf474f0",
+  "covers": [
+    "v1.6.4"
+  ],
+  "gates": "passed",
+  "gateResults": [
+    {
+      "name": "check",
+      "run": "npm ci --ignore-scripts && npm run check",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 185405
+    }
+  ],
+  "regenerate": [
+    {
+      "run": "npm ci --ignore-scripts",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 4861
+    },
+    {
+      "run": "node scripts/generate-capability-matrix.mjs",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 331
+    },
+    {
+      "run": "node scripts/generate-docs.mjs",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 543
+    },
+    {
+      "run": "node scripts/generate-pack-manifests.mjs",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 229
+    },
+    {
+      "run": "node scripts/generate-plugin-manifests.mjs",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 259
+    },
+    {
+      "run": "node scripts/generate-apm-package.mjs",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 354
+    },
+    {
+      "run": "npm run build && node dist/cli.js sync",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 1164
+    }
+  ],
+  "conflicts": [],
+  "affected": {
+    "overlaps": [],
+    "watched": [],
+    "shadowed": [],
+    "renamed": []
+  },
+  "createdAt": "2026-09-10T16:38:20.092Z"
+}
