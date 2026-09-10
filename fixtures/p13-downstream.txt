@@ -1,0 +1,1 @@
+Controlled public lifecycle fixture: downstream-owned customization must remain through integration.

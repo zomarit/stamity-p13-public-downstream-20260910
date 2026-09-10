@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "upstream": "https://github.com/zomarit/stamity-p13-upstream-20260910",
+  "branch": "main",
+  "gates": [
+    {
+      "name": "check",
+      "run": "npm ci --ignore-scripts && npm run check"
+    }
+  ],
+  "regenerate": [
+    "npm ci --ignore-scripts",
+    "node scripts/generate-capability-matrix.mjs",
+    "node scripts/generate-docs.mjs",
+    "node scripts/generate-pack-manifests.mjs",
+    "node scripts/generate-plugin-manifests.mjs",
+    "node scripts/generate-apm-package.mjs",
+    "npm run build && node dist/cli.js sync"
+  ],
+  "generatedPaths": [
+    ".apm/**",
+    ".claude/**",
+    "AGENTS.md",
+    "CLAUDE.md",
+    ".stamity/manifest.json",
+    ".stamity/generated/**",
+    "apm.yml",
+    "plugin.json",
+    ".claude-plugin/**",
+    ".cursor-plugin/**",
+    "docs/cli-reference.md",
+    "docs/configuration.md",
+    "docs/reference/**",
+    "docs/capability-matrix.md",
+    "llms.txt",
+    "src/pack/catalogPins.ts"
+  ],
+  "watch": [
+    "fixtures/p13-upstream.txt"
+  ]
+}
