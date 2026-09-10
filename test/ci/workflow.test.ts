@@ -598,7 +598,7 @@ describe("pr-checks.yml — the gates only a pull request can be asked", () => {
       branches?: string[];
       types?: string[];
     };
-    expect(pullRequest.branches).toEqual(["main"]);
+    expect(pullRequest.branches).toEqual(["main", "integration-v2"]);
     // Editing a title fires `edited` and nothing else. Without it a corrected title never
     // re-runs, and a required context stays red on a pull request that is now fine.
     expect(pullRequest.types).toContain("edited");

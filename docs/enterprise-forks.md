@@ -2,7 +2,7 @@
 title: Enterprise forks
 ---
 
-<!-- HAND-WRITTEN PAGE — verified against the tree at commit 17da583. -->
+<!-- HAND-WRITTEN PAGE — verified against the tree at commit 034c681. -->
 <!-- Re-open when: a verb or an outcome joins or leaves `scripts/upstream.mjs`, a key joins or leaves
      `.stamity/upstream.json`, the fork layer's layout or precedence changes (`src/content/catalog.ts`),
      the job split or the permissions in `.github/workflows/upstream-update.yml` change, or
@@ -127,6 +127,9 @@ reviewed workflow and explicit private destination before enabling it.
 
 Commit identity, customization and `.stamity/upstream.json`, setting its `branch` to the
 intended integration branch. Run the regeneration table and behavior gates before pushing.
+Align the downstream CI workflows' `push` and `pull_request` branch filters with that branch,
+and match its protection's required check names to the jobs that actually run. Verify those
+checks on a real update PR; inherited filters limited to `main` do not cover another branch.
 Only then enable the approved CI/upstream/private-release workflows and repository Actions,
 after the organization owner verifies the bot permissions and actual required PR checks.
 Do not copy canonical branch rules blindly: this integration branch must allow merge ancestry;
@@ -646,7 +649,12 @@ owner review a separate authenticated-fetch design before claiming that deployme
 open PR without changing its body, title, labels or branch. If the push succeeded but PR
 creation failed, retry can create the missing PR only after proving the same owned integration:
 matching release/target, merge parents, non-record tree and semantic integration record,
-with no human follow-up. The recovered PR names that retained remote SHA. Target movement,
+with no human follow-up. A fresh sync may change only the generated manifest's top-level
+`updatedAt`: recovery accepts that timestamp difference in canonical schema-1.0.0 manifests,
+with valid UTC millisecond timestamps, while requiring every other manifest byte to match.
+Missing, linked, executable, malformed or noncanonical changed manifests require review;
+other generated files remain part of the exact tree comparison. The recovered PR names that
+retained remote SHA. Target movement,
 human fixups, wrong base or ambiguous ownership require manual review and create nothing.
 A closed or merged PR is never reopened or replaced. The `upstream-publication` artifact
 retains `publish-result.json` and the prepared/remote record evidence. The lane finds its own issues by a marker it writes into
