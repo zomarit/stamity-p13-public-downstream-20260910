@@ -67,9 +67,9 @@ name: CI
 
 on:
   push:
-    branches: [main]
+    branches: [main, integration-v2]
   pull_request:
-    branches: [main]
+    branches: [main, integration-v2]
   workflow_dispatch:
   # Weekly, so pin currency is a standing duty rather than a side effect of pushing.
   schedule:
