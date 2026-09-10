@@ -1,8 +1,8 @@
 {
   "version": "1.0.0",
-  "generatedBy": "1.6.0",
+  "generatedBy": "1.6.0-public-fixture.1",
   "createdAt": "2026-08-26T06:32:43.732Z",
-  "updatedAt": "2026-09-10T15:20:58.761Z",
+  "updatedAt": "2026-09-10T16:10:34.003Z",
   "tools": [
     "claude"
   ],
@@ -15,23 +15,31 @@
         "design-quality",
         "fixer",
         "implementer",
+        "patch-agent",
         "performance",
         "researcher",
         "reviewer",
         "security",
+        "source-agent",
         "spec-author",
-        "test-runner"
+        "test-runner",
+        "add-agent",
+        "replace-agent"
       ],
       "command": [
         "cmd-ask",
         "cmd-board",
         "cmd-debug",
+        "cmd-patch-command",
         "cmd-plan",
         "cmd-pr-resolve",
         "cmd-quick",
         "cmd-rework",
+        "cmd-source-command",
         "cmd-spec",
-        "cmd-work"
+        "cmd-work",
+        "cmd-add-command",
+        "cmd-replace-command"
       ],
       "rule": [
         "ai-evals",
@@ -40,12 +48,16 @@
         "injection-screening",
         "learnings-schema",
         "migrations",
+        "patch-rule",
         "question-protocol",
         "resilience",
         "secrets",
         "security-patterns",
+        "source-rule",
         "testing",
-        "ui-states"
+        "ui-states",
+        "add-rule",
+        "replace-rule"
       ],
       "skill": [
         "browser-evidence",
@@ -54,12 +66,23 @@
         "handoff",
         "learn",
         "onboard",
+        "patch-skill",
         "qa",
-        "verify"
+        "source-skill",
+        "verify",
+        "add-skill",
+        "replace-skill"
       ]
     }
   },
   "ledger": [
+    {
+      "adapter": "claude",
+      "artifactId": "add-agent",
+      "artifactType": "agent",
+      "contentHash": "23ba2f5f86d7c6d711f76daed3aab771dd82e349441876cc70fcbb3bece0af31",
+      "path": ".claude/agents/stamity-add-agent.md"
+    },
     {
       "adapter": "claude",
       "artifactId": "creator",
@@ -90,10 +113,24 @@
     },
     {
       "adapter": "claude",
+      "artifactId": "patch-agent",
+      "artifactType": "agent",
+      "contentHash": "109bf025bc2bab7883a69c13f14ded72f4e4ee2f2b4b61ab4a3c4602447118f0",
+      "path": ".claude/agents/stamity-patch-agent.md"
+    },
+    {
+      "adapter": "claude",
       "artifactId": "performance",
       "artifactType": "agent",
       "contentHash": "7528f6f39d838f7f089d42aaf3f7ad0b64d6e48ee66a87bc72686b834d3b09a7",
       "path": ".claude/agents/stamity-performance.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "replace-agent",
+      "artifactType": "agent",
+      "contentHash": "044fd091aae4e0ffc2eef4c6032e7dc9fe9130f5375d6f096cca24535b6b0a1d",
+      "path": ".claude/agents/stamity-replace-agent.md"
     },
     {
       "adapter": "claude",
@@ -118,6 +155,13 @@
     },
     {
       "adapter": "claude",
+      "artifactId": "source-agent",
+      "artifactType": "agent",
+      "contentHash": "02116179df062ce59ddf8f4b8d9e4cc266fb7b31c43d5056495a9aa8c97ddd2d",
+      "path": ".claude/agents/stamity-source-agent.md"
+    },
+    {
+      "adapter": "claude",
       "artifactId": "spec-author",
       "artifactType": "agent",
       "contentHash": "8e7942d51c0a2e0f782c28a4c9483c4fb23ad45acedaeb3089eda6bf9c4fd8a6",
@@ -129,6 +173,13 @@
       "artifactType": "agent",
       "contentHash": "fac27dc6bc55c4778d91b44d0c59a55c429f7f54d138ddf87930878196934044",
       "path": ".claude/agents/stamity-test-runner.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "cmd-add-command",
+      "artifactType": "command",
+      "contentHash": "653d1ac37ca543b62a3274a6d199202214e94e396f78c687d8a66dcf62f9e22e",
+      "path": ".claude/commands/st-add-command.md"
     },
     {
       "adapter": "claude",
@@ -153,6 +204,13 @@
     },
     {
       "adapter": "claude",
+      "artifactId": "cmd-patch-command",
+      "artifactType": "command",
+      "contentHash": "2237de7ff7305bd127934c711bb174d7a8e0c9140bf07888baa66f833dee9a64",
+      "path": ".claude/commands/st-patch-command.md"
+    },
+    {
+      "adapter": "claude",
       "artifactId": "cmd-plan",
       "artifactType": "command",
       "contentHash": "a0f005ab6ff00604f67a32f675b6f62de90cbfc28de2dabd50325f9c172adbc5",
@@ -174,10 +232,24 @@
     },
     {
       "adapter": "claude",
+      "artifactId": "cmd-replace-command",
+      "artifactType": "command",
+      "contentHash": "1034d49da59694ceb0be885b9d62a5c51f14e19bb566efe760f4ac8f74d8e270",
+      "path": ".claude/commands/st-replace-command.md"
+    },
+    {
+      "adapter": "claude",
       "artifactId": "cmd-rework",
       "artifactType": "command",
       "contentHash": "8e60b63c44e4d0085e940f7a537b5095da7c0eaf1508cc82fe92bf1688aacc78",
       "path": ".claude/commands/st-rework.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "cmd-source-command",
+      "artifactType": "command",
+      "contentHash": "a644c6ba729396e36805ee03a468bfea45058fd734dd1ed6642c45000d93f620",
+      "path": ".claude/commands/st-source-command.md"
     },
     {
       "adapter": "claude",
@@ -192,6 +264,13 @@
       "artifactType": "command",
       "contentHash": "5b5abfe897a2919853cc436d650fb7aea3273473bda943722f05a4a121d0be83",
       "path": ".claude/commands/st-work.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "add-rule",
+      "artifactType": "rule",
+      "contentHash": "b2ee57867800ee278711f34f2e955056e04b1f4a78e3215afe01ae211113d921",
+      "path": ".claude/rules/stamity-add-rule.md"
     },
     {
       "adapter": "claude",
@@ -237,10 +316,24 @@
     },
     {
       "adapter": "claude",
+      "artifactId": "patch-rule",
+      "artifactType": "rule",
+      "contentHash": "c5a1c13fb2378f60fe9a7404605ac59c5f370c6975abf6065153bfc126712008",
+      "path": ".claude/rules/stamity-patch-rule.md"
+    },
+    {
+      "adapter": "claude",
       "artifactId": "question-protocol",
       "artifactType": "rule",
       "contentHash": "0700d055aa85f048345bd57afbfecaece70d985dc798e170600603748d7e74ff",
       "path": ".claude/rules/stamity-question-protocol.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "replace-rule",
+      "artifactType": "rule",
+      "contentHash": "c3f925ebc66055d6988297234d0aa51905666fbc13dbbb5de88b358b53395f9c",
+      "path": ".claude/rules/stamity-replace-rule.md"
     },
     {
       "adapter": "claude",
@@ -265,6 +358,13 @@
     },
     {
       "adapter": "claude",
+      "artifactId": "source-rule",
+      "artifactType": "rule",
+      "contentHash": "b9903b5fe97a139a557570b58a569bb6d4264eb6306adf963a943d941639dbee",
+      "path": ".claude/rules/stamity-source-rule.md"
+    },
+    {
+      "adapter": "claude",
       "artifactId": "testing",
       "artifactType": "rule",
       "contentHash": "bf7500ade30993447b616d498feb7d26b034c18c7db149854460781226088064",
@@ -283,6 +383,27 @@
       "artifactType": "infra",
       "contentHash": "bd595001a2d0af6fb704195940b91dd5f9dcdf24e10d7afd52043f176295fb4e",
       "path": ".claude/settings.json"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "add-skill",
+      "artifactType": "skill",
+      "contentHash": "9c15ff9329d6ba3247450eee0a6d68bf2693acb9fa548a35fe0af619538b2629",
+      "path": ".claude/skills/add-skill/SKILL.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "add-skill",
+      "artifactType": "skill",
+      "contentHash": "6704b17a8c2ce79206a7ac8b6d1a9f992e79a7b0cb1db50ba7fe33a245ae5a16",
+      "path": ".claude/skills/add-skill/assets/data.bin"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "add-skill",
+      "artifactType": "skill",
+      "contentHash": "d02b113f2ae734b143a54d118dce804e442de627ec2569d8ea2a73f954f2d752",
+      "path": ".claude/skills/add-skill/references/own.txt"
     },
     {
       "adapter": "claude",
@@ -335,10 +456,45 @@
     },
     {
       "adapter": "claude",
+      "artifactId": "patch-skill",
+      "artifactType": "skill",
+      "contentHash": "1ff0b0cc36f7aedac282e63c04928b3ca6aa87f0b6ad7a9ff3f58b8f9bb22550",
+      "path": ".claude/skills/st-patch-skill/SKILL.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "patch-skill",
+      "artifactType": "skill",
+      "contentHash": "ebc661af88813c76c214c656e7cb41c1e5aac7ecd7b98a63ecbb2263ae74b8e0",
+      "path": ".claude/skills/st-patch-skill/references/base.txt"
+    },
+    {
+      "adapter": "claude",
       "artifactId": "qa",
       "artifactType": "skill",
       "contentHash": "86fbfb7e78f660c4b92626de46828c0da7fb4ea3a602cdcdeaadee23cbdfb183",
       "path": ".claude/skills/st-qa/SKILL.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "replace-skill",
+      "artifactType": "skill",
+      "contentHash": "917995c73aeda910235fe561f0269b79c232b56113b7a9055b834fe0f1c3ab36",
+      "path": ".claude/skills/st-replace-skill/SKILL.md"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "replace-skill",
+      "artifactType": "skill",
+      "contentHash": "f4f9e515dd174c5695234db9b9c27a6c049dd8363d553ffb9d3f39ace3b9f312",
+      "path": ".claude/skills/st-replace-skill/references/own.txt"
+    },
+    {
+      "adapter": "claude",
+      "artifactId": "source-skill",
+      "artifactType": "skill",
+      "contentHash": "c9917c552e632d57094c14c1e8373baaab60351b056fd636eab73d38848c9dbd",
+      "path": ".claude/skills/st-source-skill/SKILL.md"
     },
     {
       "adapter": "claude",
@@ -456,17 +612,17 @@
       "adapter": "claude",
       "artifactId": "charter",
       "artifactType": "infra",
-      "contentHash": "b6a0a84338034f54954c3a2943fa8c190c64aa58ac757903b7847acc5398fa06",
+      "contentHash": "e547af042e05e8c887b78ad0b480f4c519ffcb06ba1d4a9829abe7a859ef647e",
       "path": "AGENTS.md",
-      "stampedVersion": "1.6.0"
+      "stampedVersion": "1.6.0-public-fixture.1"
     },
     {
       "adapter": "claude",
       "artifactId": "claude-md-bridge",
       "artifactType": "infra",
-      "contentHash": "bdb5fed37c0aafd7707207f9e1128f76a72179aed437e5ca286f4d6851bf2f1b",
+      "contentHash": "8d6d342155220d7f806b5758ae1b0d525c45d80978de49a1ee3db11806edffad",
       "path": "CLAUDE.md",
-      "stampedVersion": "1.6.0"
+      "stampedVersion": "1.6.0-public-fixture.1"
     }
   ],
   "importChoice": [

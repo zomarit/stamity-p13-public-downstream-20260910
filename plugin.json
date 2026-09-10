@@ -1,13 +1,13 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
-  "name": "stamity",
-  "version": "1.6.0",
+  "name": "stamity-p13-public-downstream-20260910",
+  "version": "1.6.0-public-fixture.1",
   "description": "Generates a tool-agnostic agentic coding setup — charter, commands, agents, skills, rules, hooks, MCP wiring — for Claude Code, Cursor, GitHub Copilot and Codex from one canonical source.",
   "author": {
     "name": "zomarit"
   },
-  "homepage": "https://stamity.dev",
-  "repository": "https://github.com/zomarit/stamity",
+  "homepage": "https://github.com/zomarit/stamity-p13-public-downstream-20260910",
+  "repository": "https://github.com/zomarit/stamity-p13-public-downstream-20260910",
   "license": "MIT",
   "keywords": [
     "agentic",
@@ -21,7 +21,7 @@
     "developer-tools"
   ],
   "extensions": {
-    "com.github.zomarit.stamity": {
+    "com.github.zomarit.stamity-p13-public-downstream-20260910": {
       "contentRoot": "./content"
     }
   }
