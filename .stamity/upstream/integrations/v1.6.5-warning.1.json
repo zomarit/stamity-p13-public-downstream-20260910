@@ -1,0 +1,74 @@
+{
+  "tool": "stamity-upstream-lane",
+  "version": 1,
+  "release": "v1.6.5-warning.1",
+  "releaseCommit": "b1f9d1d5a0d1ce17ec191dfe87b3857e56d22c60",
+  "mergeBase": "5f7ef60ffef9832c4c9f93702ce73afcb7af85e4",
+  "targetBranch": "warning-proof",
+  "targetHead": "f10b76ad4b1cec8172b6cdaceed31a6f4549a9c7",
+  "covers": [
+    "v1.6.5-warning.1"
+  ],
+  "gates": "passed",
+  "gateResults": [
+    {
+      "name": "check",
+      "run": "npm ci --ignore-scripts && npm run check",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 178493
+    }
+  ],
+  "regenerate": [
+    {
+      "run": "npm ci --ignore-scripts",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 4413
+    },
+    {
+      "run": "node scripts/generate-capability-matrix.mjs",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 311
+    },
+    {
+      "run": "node scripts/generate-docs.mjs",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 512
+    },
+    {
+      "run": "node scripts/generate-pack-manifests.mjs",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 221
+    },
+    {
+      "run": "node scripts/generate-plugin-manifests.mjs",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 266
+    },
+    {
+      "run": "node scripts/generate-apm-package.mjs",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 310
+    },
+    {
+      "run": "npm run build && node dist/cli.js sync",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 982
+    }
+  ],
+  "conflicts": [],
+  "affected": {
+    "overlaps": [],
+    "watched": [],
+    "shadowed": [],
+    "renamed": []
+  },
+  "createdAt": "2026-09-10T16:44:55.592Z"
+}
