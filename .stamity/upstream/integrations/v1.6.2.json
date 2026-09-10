@@ -1,0 +1,101 @@
+{
+  "tool": "stamity-upstream-lane",
+  "version": 1,
+  "release": "v1.6.2",
+  "releaseCommit": "dd4290b76a8c1c24564fe4d9db75489899b86edd",
+  "mergeBase": "034c6810fdd58b108a1474d9521636cfaa3ee920",
+  "targetBranch": "integration-v2",
+  "targetHead": "1d166b1a57fa22fdd5d81d64da454530478e4642",
+  "covers": [
+    "v1.6.1",
+    "v1.6.2"
+  ],
+  "gates": "failed",
+  "gateResults": [
+    {
+      "name": "check",
+      "run": "npm ci --ignore-scripts && npm run check",
+      "status": "failed",
+      "exitCode": 1,
+      "durationMs": 173642
+    }
+  ],
+  "regenerate": [
+    {
+      "run": "npm ci --ignore-scripts",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 4570
+    },
+    {
+      "run": "node scripts/generate-capability-matrix.mjs",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 319
+    },
+    {
+      "run": "node scripts/generate-docs.mjs",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 515
+    },
+    {
+      "run": "node scripts/generate-pack-manifests.mjs",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 229
+    },
+    {
+      "run": "node scripts/generate-plugin-manifests.mjs",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 264
+    },
+    {
+      "run": "node scripts/generate-apm-package.mjs",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 311
+    },
+    {
+      "run": "npm run build && node dist/cli.js sync",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 1425
+    }
+  ],
+  "conflicts": [],
+  "affected": {
+    "overlaps": [
+      {
+        "path": ".github/workflows/ci.yml",
+        "upstreamChange": "modified",
+        "upstreamLines": {
+          "added": 2,
+          "removed": 2
+        }
+      },
+      {
+        "path": ".github/workflows/pr-checks.yml",
+        "upstreamChange": "modified",
+        "upstreamLines": {
+          "added": 1,
+          "removed": 1
+        }
+      }
+    ],
+    "watched": [
+      {
+        "path": "fixtures/p13-upstream.txt",
+        "upstreamChange": "added",
+        "upstreamLines": {
+          "added": 1,
+          "removed": 0
+        }
+      }
+    ],
+    "shadowed": [],
+    "renamed": []
+  },
+  "createdAt": "2026-09-10T16:02:19.186Z"
+}
