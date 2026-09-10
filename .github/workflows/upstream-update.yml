@@ -1202,3 +1202,5 @@ jobs:
               exit 1
               ;;
           esac
+
+# Controlled public reviewed-push witness; no executable behavior changed.
