@@ -1,0 +1,1 @@
+Retained operator follow-up witness. Automation must not rewrite this branch or create its missing PR after this edit.
