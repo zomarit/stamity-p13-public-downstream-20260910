@@ -1,0 +1,1 @@
+Controlled upstream ordinary-file release witness v1.6.1. This is fixture evidence, not the canonical Stamity release.
