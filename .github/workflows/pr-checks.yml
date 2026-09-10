@@ -29,7 +29,7 @@ name: PR checks
 
 on:
   pull_request:
-    branches: [main]
+    branches: [main, integration-v2]
     # `edited` is here for the title check: editing a title fires `edited` and nothing else, so
     # without it a corrected title never re-runs and the required context stays red on a pull
     # request that is now fine. The cost is that a body edit re-runs the build job too, which is

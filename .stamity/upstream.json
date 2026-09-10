@@ -1,7 +1,7 @@
 {
   "version": 1,
   "upstream": "https://github.com/zomarit/stamity-p13-upstream-20260910",
-  "branch": "main",
+  "branch": "integration-v2",
   "gates": [
     {
       "name": "check",
